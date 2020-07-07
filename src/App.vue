@@ -1,9 +1,20 @@
 <template>
-  <div></div>
+  <div class="container my-5">
+    <QuotesProgressBar />
+    <QuoteForm />
+  </div>
 </template>
 
 <script>
-export default {};
+import QuotesProgressBar from "./components/QuotesProgressBar";
+import QuoteForm from "./components/QuoteForm";
+
+export default {
+  components: {
+    QuotesProgressBar,
+    QuoteForm
+  }
+};
 </script>
 
 <style>
