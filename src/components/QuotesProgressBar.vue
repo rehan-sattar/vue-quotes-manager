@@ -14,3 +14,9 @@
     <hr />
   </div>
 </template>
+
+<script>
+export default {
+  name: "QuotesProgressBar"
+};
+</script>
