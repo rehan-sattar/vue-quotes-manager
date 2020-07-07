@@ -8,7 +8,7 @@
         aria-valuenow="0"
         aria-valuemin="0"
         aria-valuemax="100"
-        style="width: 50%"
+        :style="{width: calcualteProgress + '%' }"
       >{{ totalQuotes}}/ 10</div>
     </div>
     <hr />
@@ -20,6 +20,11 @@ export default {
   name: "QuotesProgressBar",
   props: {
     totalQuotes: Number
+  },
+  computed: {
+    calcualteProgress() {
+      return (this.totalQuotes / 10) * 100;
+    }
   }
 };
 </script>
