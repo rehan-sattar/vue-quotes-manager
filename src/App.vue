@@ -2,7 +2,7 @@
   <div class="container my-5">
     <QuotesProgressBar :totalQuotes="quotes.length" />
     <QuoteForm :addQuote="addQuote" />
-    <QuoteList :quotes="quotes" />
+    <QuoteList :quotes="quotes" @onDeletQuote="deleteQuote" />
   </div>
 </template>
 
@@ -29,6 +29,9 @@ export default {
       } else {
         alert("Sorry! You can't add more quotes!");
       }
+    },
+    deleteQuote(quoteId) {
+      this.quotes = this.quotes.filter(q => q.id !== quoteId);
     }
   }
 };
