@@ -1,9 +1,6 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <!-- {{}} -->
-      Some text
-    </div>
+  <div class="card mt-3">
+    <div class="card-body">{{ quote.text }}</div>
   </div>
 </template>
 

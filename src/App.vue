@@ -1,6 +1,6 @@
 <template>
   <div class="container my-5">
-    <QuotesProgressBar />
+    <QuotesProgressBar :totalQuotes="quotes.length" />
     <QuoteForm :addQuote="addQuote" />
     <QuoteList :quotes="quotes" />
   </div>
@@ -24,7 +24,11 @@ export default {
   },
   methods: {
     addQuote(newQuote) {
-      this.quotes = this.quotes.concat(newQuote);
+      if (this.quotes.length < 10) {
+        this.quotes = this.quotes.concat(newQuote);
+      } else {
+        alert("Sorry! You can't add more quotes!");
+      }
     }
   }
 };

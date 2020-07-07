@@ -9,7 +9,7 @@
         aria-valuemin="0"
         aria-valuemax="100"
         style="width: 50%"
-      >1 / 10</div>
+      >{{ totalQuotes}}/ 10</div>
     </div>
     <hr />
   </div>
@@ -17,6 +17,9 @@
 
 <script>
 export default {
-  name: "QuotesProgressBar"
+  name: "QuotesProgressBar",
+  props: {
+    totalQuotes: Number
+  }
 };
 </script>
