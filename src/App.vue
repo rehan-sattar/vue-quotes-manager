@@ -3,6 +3,9 @@
     <QuotesProgressBar :totalQuotes="quotes.length" />
     <QuoteForm :addQuote="addQuote" />
     <QuoteList :quotes="quotes" @onDeletQuote="deleteQuote" />
+    <div class="alert alert-primary mt-5" role="alert">
+      <b>Info:</b> Clicking any quote will remove that quote.
+    </div>
   </div>
 </template>
 
